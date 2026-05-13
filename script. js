@@ -1,0 +1,23 @@
+ function run(){
+let number = Number(prompt("اكتب رقم ")),
+    score = "";
+  if (isNaN(number)) {
+     document.getElementById('test').innerHTML =
+     "write a Number";
+   
+  } else if (number <= 0) {
+   document.getElementById('test').innerHTML =
+   "Type a number except zero"
+   
+  }else {
+     
+  for (let i = 1; i <= 10; i++) {
+   
+     score += number + "×" + i + "=" + (number * i) + "<br>";
+     
+  }
+  
+   document.getElementById('test').innerHTML =
+     score;
+  }
+       }
