@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="دليل أدوات الذكاء الاصطناعي">
+  <title>أدوات الذكاء الاصطناعي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <div id="step1">
+    <img src="havenot.jpg" alt="شعار" width="100" height="100">
+    <h2>أهلاً بك في عالم الذكاء الاصطناعي</h2>
+    <form action="/login" method="post">
+      <fieldset>
+        <input type="text" placeholder="اسم المستخدم" required>
+        <input type="password" placeholder="كلمة المرور" required><br>
+        <input type="checkbox" id="save">
+        <label for="save">حفظ البيانات</label>
+      </fieldset>
+      <input type="submit" value="تسجيل الدخول" class="nextStep">
+    </form>
+    <button class="nextStep" onclick="nextStep()">إنشاء حساب جديد</button>
+  </div>
+
+  
+  <div id="step2" style="display:none;">
+    <img src="kkk.webp" alt="شعار" width="100" height="100">
+    <h5>انضم إلينا وتواصل مع المبرمجين وأدوات الذكاء الاصطناعي والمجتمعات المهتمة بنفس مجالك</h5>
+    <select id="Language">
+      <option>اختر لغتك</option>
+      <option value="Arabic">العربية</option>
+      <option value="English">الإنجليزية</option>
+      <option value="Japanese">اليابانية</option>
+      <option value="Spanish">الإسبانية</option>
+      <option value="French">الفرنسية</option>
+    </select>
+    <form id="from">
+      <input type="text" name="your name" placeholder="اسمك">
+      <input type="text" name="your father name" placeholder="اسم الأب">
+      <input type="email" name="email" placeholder="البريد الإلكتروني">
+      <input type="tel" name="phone" placeholder="رقم الهاتف">
+    </form>
+    <button class="nextStep" onclick="nextStep()">إنشاء الحساب</button>
+  </div>
+
+  
+<div id="step3" style="display:none;">
+  <div class="tab">
+  <button class="tablinks active" onclick="openTab(event, 'tab1')" title="الرئيسية">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+    </svg>
+  </button>
+
+  <button class="tablinks" onclick="openTab(event, 'tab2')" title="الكتابة">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+    </svg>
+  </button>
+
+  <button class="tablinks" onclick="openTab(event, 'tab3')" title="التصميم">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+    </svg>
+  </button>
+
+  <button class="tablinks" onclick="openTab(event, 'tab4')" title="الفيديو">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+    </svg>
+  </button>
+
+  <button class="tablinks" onclick="openTab(event, 'tab5')" title="الصوت">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+    </svg>
+  </button>
+
+  <button class="tablinks" onclick="openTab(event, 'tab6')" title="البرمجة">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+    </svg>
+  </button>
+
+  <button class="tablinks" onclick="openTab(event, 'tab7')" title="أشياء أخرى">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
+    </svg>
+  </button>
+</div>
+
+ 
+<div id="tab1" class="tabcontent" style="display:block;">
+  <div class="home-hero">
+    <img src="mmm.jpg" alt="شعار الذكاء الاصطناعي" class="home-logo">
+    <h1>أدوات الذكاء الاصطناعي</h1>
+    <p class="home-subtitle">مرحباً بك في دليلك السريع لأقوى أدوات الذكاء الاصطناعي المجانية والمدفوعة</p>
+  </div>
+
+  <div class="home-section">
+    <h2>الصفحه دي بتعمل شنو؟</h2>
+    <p>
+                                                                                                                                                                                هنا جمعت ليك أشهر أدوات الذكاء الاصطناعي المقسمة حسب الاستخدام. 
+                                                                                                                                                             بدل ما تفتش في قوقل وتضيع زمن، خش التبويب المناسب وتلقى الأداة مع شرح سريع ورابط مباشر.
+    </p>
+    
+    <div class="features-grid">
+      <div class="feature">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="#1877f2">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        <h3>مقسمة ومنظمة</h3>
+        <p>كتابة، تصميم، فيديو، صوت، برمجة - كل حاجة في مكانها</p>
+      </div>
+      
+      <div class="feature">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="#00c853">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+        <h3>مجرب ومضمون</h3>
+        <p>كل الأدوات دي أنا جربتها وشغالة 100%</p>
+      </div>
+      
+      <div class="feature">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="#ffeb3b">
+          <path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/>
+        </svg>
+        <h3>تحديث مستمر</h3>
+        <p>كل ما تطلع أداة جديدة قوية بضيفها هنا طوالي</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-section">
+    <h2>كيف تستخدم الموقع؟</h2>
+    <ol class="steps">
+      <li><strong>اختار القسم</strong> من الشريط التحت - كتابة، تصميم، فيديو، إلخ</li>
+      <li><strong>اقرأ الوصف السريع</strong> عشان تعرف الأداة بتعمل شنو</li>
+      <li><strong>اضغط "فتح الأداة"</strong> وحتتحول ليها مباشرة</li>
+    </ol>
+  </div>
+
+  <div class="home-section tip-box">
+    <h3>💡 نصيحة</h3>
+    <p>
+                                                                                                                                                                   لو انت مبتدئ ابدأ بـ ChatGPT للكتابة و Canva AI للتصميم و ElevenLabs للصوت. 
+                                                                                                                                                                                    ديل أسهل 3 أدوات ونتائجهم ممتازة من أول مرة.
+    </p>
+  </div>
+</div>
+
+   
+<div id="tab2" class="tabcontent">
+  <h2>أدوات الكتابة والإبداع</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=128" alt="ChatGPT">
+      <h3>ChatGPT</h3>
+      <p><strong>بتعمل شنو:</strong> دردشة ذكية تكتب مقالات، تجاوب أسئلة، تبرمج، تترجم، وتألف قصص.</p>
+      <p><strong>كيف بتشتغل:</strong> تكتب سؤالك وهي تولد إجابة نصية في ثواني.</p>
+      <a href="https://chatgpt.com">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128" alt="Gemini">
+      <h3>Google Gemini</h3>
+      <p><strong>بتعمل شنو:</strong> تلخص إيميلات وفيديوهات يوتيوب، تكتب محتوى، وتحلل ملفات.</p>
+      <p><strong>كيف بتشتغل:</strong> بتربط مع قوقل درايف وGmail وتجيب المعلومات مباشرة.</p>
+      <a href="https://gemini.google.com" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=claude.ai&sz=128" alt="Claude">
+      <h3>Claude</h3>
+      <p><strong>بتعمل شنو:</strong> كتابة نصوص طويلة، تحليل مستندات، وشرح مواضيع معقدة.</p>
+      <p><strong>كيف بتشتغل:</strong> ترفع ملف PDF أو تكتب نص طويل وهي بتتعامل معاهو.</p>
+      <a href="https://claude.ai" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128" alt="Perplexity">
+      <h3>Perplexity AI</h3>
+      <p><strong>بتعمل شنو:</strong> بحث بالذكاء الاصطناعي مع مصادر موثوقة بدل جوجل العادي.</p>
+      <p><strong>كيف بتشتغل:</strong> تسأل سؤال وهي تجيب الخلاصة مع الروابط.</p>
+      <a href="https://perplexity.ai" target="_blank">فتح الأداة</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="tab3" class="tabcontent">
+  <h2>أدوات التصميم والجرافيك</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=ideogram.ai&sz=128" alt="Ideogram">
+      <h3>Ideogram</h3>
+      <p><strong>بتعمل شنو:</strong> توليد صور فيها كتابة صحيحة 100%. أحسن أداة للبوسترات واللوغو.</p>
+      <p><strong>كيف بتشتغل:</strong> تكتب الوصف بالعربي أو الإنجليزي وهي تعمل الصورة.</p>
+      <a href="https://ideogram.ai" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=leonardo.ai&sz=128" alt="Leonardo">
+      <h3>Leonardo.Ai</h3>
+      <p><strong>بتعمل شنو:</strong> توليد صور فنية ورسم من سكتش. 150 صورة مجاناً يومياً.</p>
+      <p><strong>كيف بتشتغل:</strong> ترفع رسمة أو تكتب وصف وهي تحولها لصورة احترافية.</p>
+      <a href="https://leonardo.ai" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=recraft.ai&sz=128" alt="Recraft">
+      <h3>Recraft AI</h3>
+      <p><strong>بتعمل شنو:</strong> توليد أيقونات وشعارات بصيغة Vector SVG قابلة للتعديل.</p>
+      <p><strong>كيف بتشتغل:</strong> تكتب شكل الأيقونة وهي تولدها جاهزة للتعديل.</p>
+      <a href="https://recraft.ai" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=canva.com&sz=128" alt="Canva">
+      <h3>Canva AI</h3>
+      <p><strong>بتعمل شنو:</strong> تصميم منشورات وعروض تقديمية مع قوالب جاهزة وماجيك إيريز.</p>
+      <p><strong>كيف بتشتغل:</strong> تختار قالب وتكتب النص وهي تصمم ليك كلو.</p>
+      <a href="https://canva.com" target="_blank">فتح الأداة</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="tab4" class="tabcontent">
+  <h2>أدوات صناعة الفيديو</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=vids.google.com&sz=128" alt="Google Vids">
+      <h3>Google Vids</h3>
+      <p><strong>بتعمل شنو:</strong> إنشاء فيديوهات كاملة بـ avatars و voiceover مجاناً.</p>
+      <p><strong>كيف بتشتغل:</strong> تكتب السكريبت وهي تعمل الفيديو والمونتاج.</p>
+      <a href="https://vids.google.com" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=runwayml.com&sz=128" alt="Runway">
+      <h3>Runway</h3>
+      <p><strong>بتعمل شنو:</strong> تحويل النص لفيديو سينمائي قصير وجودة عالية.</p>
+      <p><strong>كيف بتشتغل:</strong> تكتب مشهد وهي تولد 5 ثواني فيديو.</p>
+      <a href="https://runwayml.com" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=capcut.com&sz=128" alt="CapCut">
+      <h3>CapCut AI</h3>
+      <p><strong>بتعمل شنو:</strong> تعديل فيديو سريع، قص تلقائي، ترجمة، إزالة خلفية.</p>
+      <p><strong>كيف بتشتغل:</strong> ترفع الفيديو وهي تعمل المونتاج تلقائياً.</p>
+      <a href="https://capcut.com" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=heygen.com&sz=128" alt="HeyGen">
+      <h3>HeyGen</h3>
+      <p><strong>بتعمل شنو:</strong> فيديوهات Avatars بتتكلم بأي لغة. مفيد للشروحات.</p>
+      <p><strong>كيف بتشتغل:</strong> تختار شخصية وتكتب النص وهي تنطقو.</p>
+      <a href="https://heygen.com" target="_blank">فتح الأداة</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="tab5" class="tabcontent">
+  <h2>أدوات الصوت والموسيقى</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128" alt="ElevenLabs">
+      <h3>ElevenLabs</h3>
+      <p><strong>بتعمل شنو:</strong> تحويل النص لصوت بشري واقعي. 10 دقايق مجاناً شهرياً.</p>
+      <p><strong>كيف بتشتغل:</strong> تلصق النص وتختار الصوت واللغة وهي تقرا ليك.</p>
+      <a href="https://elevenlabs.io" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=podcast.adobe.com&sz=128" alt="Adobe Podcast">
+      <h3>Adobe Podcast Enhance</h3>
+      <p><strong>بتعمل شنو:</strong> تنقية الصوت وإزالة الضوضاء والصدى من التسجيل.</p>
+      <p><strong>كيف بتشتغل:</strong> ترفع الملف الصوتي وهي تنضفو في ثانية.</p>
+      <a href="https://podcast.adobe.com/enhance" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=otter.ai&sz=128" alt="Otter">
+      <h3>Otter.ai</h3>
+      <p><strong>بتعمل شنو:</strong> تحويل الكلام لنص مكتوب مع التعرف على المتحدثين.</p>
+      <p><strong>كيف بتشتغل:</strong> ترفع تسجيل أو تسجل مباشرة وهي تفرغو كتابة.</p>
+      <a href="https://otter.ai" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=flow.google.com&sz=128" alt="Flow Music">
+      <h3>Google Flow Music</h3>
+      <p><strong>بتعمل شنو:</strong> تأليف موسيقى بالذكاء الاصطناعي مع تحكم في الصوت.</p>
+      <p><strong>كيف بتشتغل:</strong> تكتب نوع الموسيقى وهي تولد مقطع جاهز.</p>
+      <a href="https://flow.google.com" target="_blank">فتح الأداة</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="tab6" class="tabcontent">
+  <h2>أدوات البرمجة</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=codeium.com&sz=128" alt="Codeium">
+      <h3>Codeium</h3>
+      <p><strong>بتعمل شنو:</strong> تكملة كود ودردشة للمبرمجين. مجاني 100% بدون حدود.</p>
+      <p><strong>كيف بتشتغل:</strong> تشتغل إضافة في VS Code وتكتب ليك الكود.</p>
+      <a href="https://codeium.com" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=ai.google.dev&sz=128" alt="Gemini Code">
+      <h3>Gemini Code Assist</h3>
+      <p><strong>بتعمل شنو:</strong> شرح وتصحيح الكود وكتابة دوال كاملة مجاناً للطلاب.</p>
+      <p><strong>كيف بتشتغل:</strong> تلصق الكود وتقول ليها "اشرح" أو "صلح الخطأ".</p>
+      <a href="https://ai.google.dev" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=replit.com&sz=128" alt="Replit">
+      <h3>Replit AI</h3>
+      <p><strong>بتعمل شنو:</strong> برمجة وتشغيل المشروع أونلاين مع مساعد ذكي.</p>
+      <p><strong>كيف بتشتغل:</strong> تكتب "اعمل لي موقع" وهي تكتب الكود وتشغلو.</p>
+      <a href="https://replit.com" target="_blank">فتح الأداة</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="tab7" class="tabcontent">
+  <h2>أدوات الدراسة والإنتاجية</h2>
+  <div class="tools-grid">
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=notebooklm.google.com&sz=128" alt="NotebookLM">
+      <h3>NotebookLM</h3>
+      <p><strong>بتعمل شنو:</strong> تلخيص ملفات PDF و Docs وعمل بودكاست صوتي منهم.</p>
+      <p><strong>كيف بتشتغل:</strong> ترفع الملفات وتسألها وهي تجاوب من المحتوى بس.</p>
+      <a href="https://notebooklm.google.com" target="_blank">فتح الأداة</a>
+    </div>
+
+    <div class="tool-card">
+      <img src="https://www.google.com/s2/favicons?domain=notion.so&sz=128" alt="Notion AI">
+      <h3>Notion AI</h3>
+      <p><strong>بتعمل شنو:</strong> مساعد كتابة وتنظيم داخل Notion، يلخص ويترجم ويكتب مهام.</p>
+      <p><strong>كيف بتشتغل:</strong> اضغط Space واكتب "لخص الصفحة دي" وهو بينفذ.</p>
+      <a href="https://www.notion.so/product/ai/" target="_blank">فتح الأداة</a>
+    </div>
+  </div>
+</div>
+
+  <script src="index.js"></script>
+</body>
+</html>
